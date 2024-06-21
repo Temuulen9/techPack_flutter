@@ -55,10 +55,7 @@ class _VerifyOtpeState extends State<VerifyOtp> {
                 focusedBorderColor: primaryColor,
                 showFieldAsBox: false,
                 borderWidth: 4.0,
-                onCodeChanged: (String code) {
-                  //handle validation or checks here if necessary
-                },
-                //runs when every textfield is filled
+                onCodeChanged: (String code) {},
                 onSubmit: (String verificationCode) {
                   log('filled');
                 },
@@ -67,17 +64,7 @@ class _VerifyOtpeState extends State<VerifyOtp> {
                 height: 15,
               ),
               TextButton(
-                onPressed: () => {
-                  log(phonenumberController!.value.text),
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Register(
-                        phoneNumber: phonenumberController!.value.text,
-                      ),
-                    ),
-                  )
-                },
+                onPressed: onPressed,
                 child: const Text('Утасны дугаар баталгаажуулах'),
               )
             ],
@@ -85,5 +72,18 @@ class _VerifyOtpeState extends State<VerifyOtp> {
         ),
       ),
     );
+  }
+
+  void onPressed() {
+    if (phonenumberController!.value.text.isNotEmpty) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Register(
+            phoneNumber: phonenumberController!.value.text,
+          ),
+        ),
+      );
+    }
   }
 }

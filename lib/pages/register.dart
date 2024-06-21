@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
-  const Register({super.key, this.phoneNumber});
+  const Register({super.key, required this.phoneNumber});
 
-  final String? phoneNumber;
+  final String phoneNumber;
 
   @override
   State<Register> createState() => _RegisterState();

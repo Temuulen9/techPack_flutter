@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:techpack_flutter/pages/login.dart';
-import 'package:techpack_flutter/pages/register.dart';
 import 'package:techpack_flutter/pages/verify_otp.dart';
 
 void main() {
@@ -17,7 +16,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginPage(),
-        '/register': (context) => const Register(),
         '/verifyOtp': (context) => const VerifyOtp(),
       },
       theme: ThemeData(
