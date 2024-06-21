@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135527366239",
+    "project_id": "techpackflutter",
+    "storage_bucket": "techpackflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135527366239:android:6ef3507d217b9213d9a5ea",
+        "android_client_info": {
+          "package_name": "com.example.techpack_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYaCqv2POr_yoPemXLN3xI71_dFXfNha8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
