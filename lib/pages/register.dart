@@ -143,38 +143,38 @@ class _RegisterState extends State<Register> {
                   obscureText: true,
                 ),
                 const SizedBox(height: 20),
-                isLoading
-                    ? LoadingAnimationWidget.inkDrop(
-                        color: Theme.of(context).colorScheme.primary,
-                        size: 35,
-                      )
-                    : Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    isLoading
+                        ? LoadingAnimationWidget.inkDrop(
+                            color: Theme.of(context).colorScheme.primary,
+                            size: 35,
+                          )
+                        : SizedBox(
                             width: MediaQuery.of(context).size.width * 0.9,
                             child: FilledButton(
                               onPressed: register,
                               child: const Text('Бүртгүүлэх'),
                             ),
                           ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          const Divider(),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              _formKey.currentState?.reset();
-                              Navigator.pop(context);
-                            },
-                            child: const Text('Буцах'),
-                          ),
-                        ],
-                      ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Divider(),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        _formKey.currentState?.reset();
+                        Navigator.pop(context);
+                      },
+                      child: const Text('Буцах'),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -208,8 +208,8 @@ class _RegisterState extends State<Register> {
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
-          backgroundColor: Colors.deepPurpleAccent,
-          textColor: Colors.white,
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          textColor: Theme.of(context).colorScheme.onPrimary,
           fontSize: 16.0,
         );
       } finally {
@@ -221,8 +221,8 @@ class _RegisterState extends State<Register> {
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
-          backgroundColor: Colors.deepPurpleAccent,
-          textColor: Colors.white,
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          textColor: Theme.of(context).colorScheme.onPrimary,
           fontSize: 16.0,
         );
 
